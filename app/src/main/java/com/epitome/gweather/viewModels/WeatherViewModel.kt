@@ -1,7 +1,9 @@
 package com.epitome.gweather.viewModels
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.epitome.gweather.models.local.PlaceObj
 import com.epitome.gweather.models.local.VMState
 import com.epitome.gweather.repository.PlaceRepository
 import com.epitome.gweather.repository.WeatherRepository
@@ -17,6 +19,8 @@ class WeatherViewModel @Inject constructor(
     private val placeRepository: PlaceRepository,
     private val weatherRepository: WeatherRepository
 ): ViewModel() {
+
+    var placeLists = mutableListOf<PlaceObj>()
 
     private val _suggestion = MutableSharedFlow<VMState>()
     val suggestion = _suggestion.asSharedFlow()

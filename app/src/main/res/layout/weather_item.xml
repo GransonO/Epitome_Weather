@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    android:layout_marginBottom="16dp"
+    android:elevation="13dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1E03DAC5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9 November, 2022"
+            android:textSize="12sp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="6dp"
+            android:textColor="#8B8B8B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.983"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.989" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:elevation="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/dateText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/tempImg"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.044"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.119"
+                            app:srcCompat="@drawable/ic_thermostat" />
+
+                        <TextView
+                            android:id="@+id/tempText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Temperature"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/tempImg"
+                            app:layout_constraintStart_toEndOf="@+id/tempImg"
+                            app:layout_constraintTop_toTopOf="@+id/tempImg"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/temperature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="0"
+                            app:layout_constraintBottom_toBottomOf="@+id/tempImg"
+                            app:layout_constraintEnd_toEndOf="@+id/tempText"
+                            app:layout_constraintStart_toStartOf="@+id/tempText"
+                            app:layout_constraintTop_toBottomOf="@+id/tempText" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/rainImg"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.044"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.119"
+                            app:srcCompat="@drawable/ic_rain" />
+
+                        <TextView
+                            android:id="@+id/rain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Precipitation"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/rainImg"
+                            app:layout_constraintStart_toEndOf="@+id/rainImg"
+                            app:layout_constraintTop_toTopOf="@+id/rainImg"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/rainText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="0"
+                            app:layout_constraintBottom_toBottomOf="@+id/rainImg"
+                            app:layout_constraintEnd_toEndOf="@+id/rain"
+                            app:layout_constraintStart_toStartOf="@+id/rain"
+                            app:layout_constraintTop_toBottomOf="@+id/rain" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/windImg"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.044"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.119"
+                            app:srcCompat="@drawable/ic_wind" />
+
+                        <TextView
+                            android:id="@+id/windText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Wind"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/windImg"
+                            app:layout_constraintStart_toEndOf="@+id/windImg"
+                            app:layout_constraintTop_toTopOf="@+id/windImg"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/wind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="0"
+                            app:layout_constraintBottom_toBottomOf="@+id/windImg"
+                            app:layout_constraintEnd_toEndOf="@+id/windText"
+                            app:layout_constraintStart_toStartOf="@+id/windText"
+                            app:layout_constraintTop_toBottomOf="@+id/windText" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/waterImg"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.044"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.119"
+                            app:srcCompat="@drawable/ic_water" />
+
+                        <TextView
+                            android:id="@+id/waterText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Humidity"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/waterImg"
+                            app:layout_constraintStart_toEndOf="@+id/waterImg"
+                            app:layout_constraintTop_toTopOf="@+id/waterImg"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/water"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="0"
+                            app:layout_constraintBottom_toBottomOf="@+id/waterImg"
+                            app:layout_constraintEnd_toEndOf="@+id/waterText"
+                            app:layout_constraintStart_toStartOf="@+id/waterText"
+                            app:layout_constraintTop_toBottomOf="@+id/waterText" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/visibilityImg"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.044"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.119"
+                            app:srcCompat="@drawable/ic_visibility" />
+
+                        <TextView
+                            android:id="@+id/visibilityTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Visibility"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/visibilityImg"
+                            app:layout_constraintStart_toEndOf="@+id/visibilityImg"
+                            app:layout_constraintTop_toTopOf="@+id/visibilityImg"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/visibility"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="0"
+                            app:layout_constraintBottom_toBottomOf="@+id/visibilityImg"
+                            app:layout_constraintEnd_toEndOf="@+id/visibilityTxt"
+                            app:layout_constraintStart_toStartOf="@+id/visibilityTxt"
+                            app:layout_constraintTop_toBottomOf="@+id/visibilityTxt" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/cloudImg"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.044"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.119"
+                            app:srcCompat="@drawable/ic_cloud" />
+
+                        <TextView
+                            android:id="@+id/cloudTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Cloud Cover"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/cloudImg"
+                            app:layout_constraintStart_toEndOf="@+id/cloudImg"
+                            app:layout_constraintTop_toTopOf="@+id/cloudImg"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/cloud"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="0"
+                            app:layout_constraintBottom_toBottomOf="@+id/cloudImg"
+                            app:layout_constraintEnd_toEndOf="@+id/cloudTxt"
+                            app:layout_constraintStart_toStartOf="@+id/cloudTxt"
+                            app:layout_constraintTop_toBottomOf="@+id/cloudTxt" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
