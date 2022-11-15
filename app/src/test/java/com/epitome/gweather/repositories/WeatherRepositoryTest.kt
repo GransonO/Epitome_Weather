@@ -16,9 +16,10 @@ class WeatherRepositoryTest : WeatherRepository {
         key: String
     ): Flow<Resource<Timelines>> = flow {
         delay(1000)
-        emit(Resource.Success(
-            Timelines()
-        )
+        emit(
+            Resource.Success(
+                Timelines()
+            )
         )
     }
 
