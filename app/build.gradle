@@ -22,7 +22,8 @@ android {
         Properties props = new Properties()
         props.load(project.rootProject.file("local.properties").newDataInputStream())
 
-        buildConfigField "String", "api_key", "\" ${props.getProperty("api_key")}\""
+        buildConfigField "String", "weather_api_key", "\" ${props.getProperty("weather_api_key")}\""
+        buildConfigField "String", "maps_api_key", "\" ${props.getProperty("maps_api_key")}\""
     }
 
     buildTypes {

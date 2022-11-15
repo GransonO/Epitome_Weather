@@ -12,7 +12,6 @@ class WeatherRepositoryImpl @Inject constructor(
     override suspend fun getWeatherForecast( lat: Double, lon :Double, field: String, key: String) = makeRemoteCall {
         weatherService.getTimelinesForecast(
             location = "$lat,$lon",
-            fields = field,
             apikey = key
         )
     }

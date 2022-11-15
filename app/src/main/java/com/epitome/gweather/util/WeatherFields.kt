@@ -1,5 +1,5 @@
 package com.epitome.gweather.util
 
 enum class WeatherFields {
-    weatherCode, temperature, humidity, cloudCover, precipitationType
+    weatherCode, humidity, cloudCover, precipitationType, precipitationIntensity, windSpeed, windDirection, visibility
 }
