@@ -1,4 +1,4 @@
-package com.granson.dvtweather.data.models.places.details
+package com.epitome.gweather.models.remote.places.details
 
 
 import com.google.gson.annotations.SerializedName
@@ -7,11 +7,11 @@ data class Result(
     @SerializedName("address_components")
     val addressComponents: List<AddressComponent> = listOf(),
     @SerializedName("adr_address")
-    val adrAddress: String,
+    val adrAddress: String = "",
     @SerializedName("formatted_address")
-    val formattedAddress: String,
+    val formattedAddress: String = "",
     @SerializedName("geometry")
-    val geometry: Geometry,
+    val geometry: Geometry = Geometry(),
     @SerializedName("icon")
     val icon: String = "",
     @SerializedName("icon_background_color")
@@ -19,11 +19,11 @@ data class Result(
     @SerializedName("icon_mask_base_uri")
     val iconMaskBaseUri: String = "",
     @SerializedName("name")
-    val name: String,
+    val name: String = "Test place name",
     @SerializedName("photos")
     val photos: List<Photo>  = listOf(),
     @SerializedName("place_id")
-    val placeId: String,
+    val placeId: String = "1234567890",
     @SerializedName("reference")
     val reference: String = "",
     @SerializedName("types")

@@ -1,6 +1,7 @@
-package com.granson.dvtweather.data.models.places.autocomplete
+package com.epitome.gweather.models.remote.places.autocomplete
 
 
+import com.epitome.gweather.models.remote.places.autocomplete.MainTextMatchedSubstring
 import com.google.gson.annotations.SerializedName
 
 data class StructuredFormatting(
