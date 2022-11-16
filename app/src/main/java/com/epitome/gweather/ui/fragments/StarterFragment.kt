@@ -22,11 +22,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.epitome.gweather.BuildConfig
 import com.epitome.gweather.R
 import com.epitome.gweather.models.local.PlaceObj
+import com.epitome.gweather.models.remote.places.autocomplete.AutoComplete
 import com.epitome.gweather.ui.adapters.PlaceAdapter
 import com.epitome.gweather.util.Utils
 import com.epitome.gweather.util.Utils.baseLogger
 import com.epitome.gweather.viewModels.WeatherViewModel
-import com.granson.dvtweather.data.models.places.autocomplete.AutoComplete
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
