@@ -8,6 +8,7 @@ on:
     branches:
       - 'develop'
 
+
 jobs:
   test:
     name: Run Unit Tests
@@ -25,10 +26,10 @@ jobs:
         MAPS_API_KEY: ${{ secrets.MAPS_API_KEY }}
       run: echo maps_api_key=\"MAPS_API_KEY\" > ./local.properties
 
-#    - name: Prepare Weather API Keys
-#      env:
-#        WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
-#      run: echo weather_api_key=\"WEATHER_API_KEY\" > ./local.properties
+    - name: Prepare Weather API Keys
+      env:
+        WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+      run: echo weather_api_key=\"WEATHER_API_KEY\" > ./local.properties
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
