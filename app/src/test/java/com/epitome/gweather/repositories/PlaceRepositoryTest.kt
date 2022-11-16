@@ -15,7 +15,9 @@ import kotlinx.coroutines.flow.flow
 
 class PlaceRepositoryTest: PlaceRepository {
 
-    private var placeRequest = AutoComplete(predictions = listOf(
+
+    private var placeRequest = AutoComplete(
+        predictions = listOf(
             Prediction(
                 description = "Test Place 1",
                 matchedSubstrings = listOf(
@@ -67,17 +69,8 @@ class PlaceRepositoryTest: PlaceRepository {
                 reference = "1234",
                 structuredFormatting = StructuredFormatting(),
             ),
-        ))
-
-    override suspend fun suggestPlace(name: String, key: String): Flow<Resource<AutoComplete>> = flow {
-        val placeFilter = placeRequest.predictions.filter { it.description.contains(name, ignoreCase = true) }
-        println("Request got here --> $placeFilter")
-        emit(Resource.Success(
-            AutoComplete(
-                predictions = placeFilter
-            )
-        ))
-    }
+        )
+    )
 
     override suspend fun getPlace(placeId: String, key: String): Flow<Resource<PlaceDetails>> = flow {
         try {
@@ -95,9 +88,19 @@ class PlaceRepositoryTest: PlaceRepository {
                     )
                 )
             ))
-        } catch (e: Exception){
+        }catch (e: Exception){
             emit(Resource.Error("No place"))
         }
+    }
+
+    override suspend fun suggestPlace(name: String, key: String): Flow<Resource<AutoComplete>> = flow {
+        val placeFilter = placeRequest.predictions.filter { it.description.contains(name, ignoreCase = true) }
+        println("Request got here --> $placeFilter")
+        emit(Resource.Success(
+            AutoComplete(
+                predictions = placeFilter
+            )
+        ))
     }
 
 }

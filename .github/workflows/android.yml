@@ -8,6 +8,7 @@ on:
     branches:
       - 'develop'
 
+
 jobs:
   test:
     name: Run Unit Tests
@@ -23,7 +24,7 @@ jobs:
     - name: Prepare Maps API Keys
       env:
         MAPS_API_KEY: ${{ secrets.MAPS_API_KEY }}
-      run: echo weather_api_key=\"MAPS_API_KEY\" > ./local.properties
+      run: echo maps_api_key=\"MAPS_API_KEY\" > ./local.properties
 
     - name: Prepare Weather API Keys
       env:
