@@ -5,5 +5,5 @@ import com.google.gson.annotations.SerializedName
 
 data class Timelines(
     @SerializedName("data")
-    val data: Data
+    val data: Data = Data()
 )

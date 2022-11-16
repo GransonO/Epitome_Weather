@@ -1,7 +1,7 @@
 package com.epitome.gweather.services
 
-import com.granson.dvtweather.data.models.places.autocomplete.AutoComplete
-import com.granson.dvtweather.data.models.places.details.PlaceDetails
+import com.epitome.gweather.models.remote.places.autocomplete.AutoComplete
+import com.epitome.gweather.models.remote.places.details.PlaceDetails
 import retrofit2.http.GET
 import retrofit2.http.Query
 

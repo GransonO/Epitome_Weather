@@ -4,7 +4,7 @@ import com.epitome.gweather.repository.PlaceRepository
 import com.epitome.gweather.repository.remoteUtils.Remote
 import com.epitome.gweather.repository.remoteUtils.Resource
 import com.epitome.gweather.services.PlaceService
-import com.granson.dvtweather.data.models.places.autocomplete.AutoComplete
+import com.epitome.gweather.models.remote.places.autocomplete.AutoComplete
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

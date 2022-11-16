@@ -1,4 +1,4 @@
-package com.granson.dvtweather.data.models.places.details
+package com.epitome.gweather.models.remote.places.details
 
 
 import com.google.gson.annotations.SerializedName

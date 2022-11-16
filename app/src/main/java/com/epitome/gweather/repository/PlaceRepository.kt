@@ -1,8 +1,8 @@
 package com.epitome.gweather.repository
 
 import com.epitome.gweather.repository.remoteUtils.Resource
-import com.granson.dvtweather.data.models.places.autocomplete.AutoComplete
-import com.granson.dvtweather.data.models.places.details.PlaceDetails
+import com.epitome.gweather.models.remote.places.autocomplete.AutoComplete
+import com.epitome.gweather.models.remote.places.details.PlaceDetails
 import kotlinx.coroutines.flow.Flow
 
 interface PlaceRepository {
